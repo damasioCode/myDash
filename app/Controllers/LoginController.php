@@ -10,7 +10,7 @@ class LoginController
     public function auth() 
     {
         try {
-            $user = new \App\Model\User();
+            $user = new \App\Models\User();
             $user->setEmail( $_POST['email'] );
             $user->setPassword( $_POST['password'] );
             $user->authLogin();

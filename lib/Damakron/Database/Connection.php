@@ -1,6 +1,6 @@
 <?php
 
-namespace Damakron\Database;
+namespace Lib\Damakron\Database;
 
 abstract class Connection
 {
@@ -9,7 +9,7 @@ abstract class Connection
     public static function getConn()
     {
         if (!self::$conn) {
-            self::$conn = new \PDO("{$_ENV['DATABASE_DRIVER']}: host={$_ENV['DATABASE_HOST']}; dbname={$_ENV['DATABASE_NAME']}", $_ENV['DATABASE_USER'], $_ENV['DATABASE_PASS']);
+            self::$conn = new \PDO("{$_ENV['DB_DRIVER']}: host={$_ENV['DB_HOST']}; dbname={$_ENV['DB_NAME']}", $_ENV['DB_USER'], $_ENV['DB_PASS']);
         }
 
         return self::$conn;

@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use \Lib\Damakron\Database\Connection;
+
 class User
 {
     private $id;
@@ -12,7 +14,7 @@ class User
     final public function authLogin() 
     {
         //connection to database
-        $conn = Lib\Damakron\Database\Connection::getConn();
+        $conn = Connection::getConn();
 
         //select user by email
         $sql = "SELECT * FROM users WHERE email = :email";

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-use App\Core\Core;
+use \App\Core\Core;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

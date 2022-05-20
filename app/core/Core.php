@@ -8,7 +8,7 @@ class Core
 {
     private $url;
 
-    private $controller = 'App\\Controller\\PageController';
+    private $controller = 'App\\Controllers\\PageController';
     private $method = 'index';
     private $params = [];
 
@@ -39,7 +39,7 @@ class Core
             $this->url = explode( '/', $request['url'] );
 
             //get url controller
-            $this->controller = 'App\\Controller\\'.ucfirst($this->url[0]).'Controller';
+            $this->controller = 'App\\Controllers\\'.ucfirst($this->url[0]).'Controller';
             array_shift($this->url);
 
             if( isset($this->url[0]) && !empty($this->url[0]) ) {
@@ -59,23 +59,6 @@ class Core
                 header("Location: ". Template::getUrl() . '/404');
             }
 
-            // if( $this->user ) {
-            //     array_push($pagePermission, 'App\\Controller\\DashboardController');
-                
-            //     if( !isset( $this->controller ) || !in_array( $this->controller, $pagePermission ) ) {
-            //         $this->controller = 'App\\Controller\\DashboardController';
-            //         $this->method = 'index';
-            //     } 
-            // } 
-            // else {
-            //     array_push($pagePermission, 'App\\Controller\\LoginController');
-    
-            //     if( !isset( $this->controller ) || !in_array( $this->controller, $pagePermission ) ) {
-            //         $this->controller = 'App\\Controller\\LoginController';
-            //         $this->method = 'index';
-            //         header('Location: http://localhost:8080/myDash/public/login');
-            //     }
-            // }
         } 
 
 

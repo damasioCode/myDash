@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controllers;
 
 use App\Core\Template;
 
@@ -17,7 +17,7 @@ class DashboardController
     public function index()
     {
         if( $this->user ) {
-            $loader = new \Twig\Loader\FilesystemLoader('../app/view');
+            $loader = new \Twig\Loader\FilesystemLoader('../App/Views');
             $twig = new \Twig\Environment($loader, [
                 'cache' => '/path/to/compilation_cache',
                 'auto_reload' => true,

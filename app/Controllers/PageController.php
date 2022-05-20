@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controllers;
 
 use App\Core\Template;
 
@@ -12,7 +12,7 @@ class PageController
 {
     public function index()
     {
-        $loader = new \Twig\Loader\FilesystemLoader('../app/view');
+        $loader = new \Twig\Loader\FilesystemLoader('../App/Views');
         $twig = new \Twig\Environment($loader, [
             'cache' => '/path/to/compilation_cache',
             'auto_reload' => true,

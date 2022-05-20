@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model;
+namespace App\Models;
 
 class User
 {
@@ -12,7 +12,7 @@ class User
     final public function authLogin() 
     {
         //connection to database
-        $conn = \Damakron\Database\Connection::getConn();
+        $conn = Lib\Damakron\Database\Connection::getConn();
 
         //select user by email
         $sql = "SELECT * FROM users WHERE email = :email";

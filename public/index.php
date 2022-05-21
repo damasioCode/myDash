@@ -1,11 +1,12 @@
 <?php
 session_start();
 
-use App\Core\Core;
+use \App\Core\Core;
 
-require_once './../vendor/autoload.php';
+return var_dump(__DIR__);
+require_once '../vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable('./../');
+$dotenv = \Dotenv\Dotenv::createImmutable('/../');
 $dotenv->load();
 
 $core = new Core();

@@ -14,7 +14,6 @@ class PageController
     {
         $loader = new \Twig\Loader\FilesystemLoader('App/Views');
         $twig = new \Twig\Environment($loader, [
-            'cache' => '/path/to/compilation_cache',
             'auto_reload' => true,
         ]);
         $parameters['error'] = $_SESSION['msg_error']['msg'] ?? null;

@@ -17,7 +17,7 @@ class DashboardController
     public function index()
     {
         if( $this->user ) {
-            $loader = new \Twig\Loader\FilesystemLoader('../App/Views');
+            $loader = new \Twig\Loader\FilesystemLoader('App/Views');
             $twig = new \Twig\Environment($loader, [
                 'cache' => '/path/to/compilation_cache',
                 'auto_reload' => true,

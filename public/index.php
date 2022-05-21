@@ -3,7 +3,7 @@ session_start();
 
 use App\Core\Core;
 
-return var_dump( __DIR__ . '/../vendor/autoload.php' );
+return var_dump('/../vendor/autoload.php' );
 //require_once __DIR__ . '/../vendor/autoload.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');

@@ -18,7 +18,7 @@ class PageController
         ]);
         $parameters['error'] = $_SESSION['msg_error']['msg'] ?? null;
         $parameters['name_user'] = $_SESSION['user']['name_user'] ?? null;
-        $parameters['base_url'] = Template::getUrl();
+        $parameters['base_url'] = Template::getUrl() . '/../';
         // $parameters['post'] = var_dump($_POST);
 
         $template = $twig->load('home.html');

@@ -15,10 +15,10 @@ class LoginController
             $user->setPassword( $_POST['password'] );
             $user->authLogin();
 
-            header("Location: ". Template::getUrl() . './dashboard');
+            header("Location: ". Template::getUrl() . '/dashboard');
         } catch (\Exception $e) {
             $_SESSION['msg_error'] = ['msg' => $e->getMessage(), 'count' => 0];            
-            header("Location: ". Template::getUrl() . './');
+            header("Location: ". Template::getUrl() . '/');
 
             // echo "Email invalido seu noia";
         }

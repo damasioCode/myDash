@@ -12,7 +12,7 @@ class PageController
 {
     public function index()
     {
-        $loader = new \Twig\Loader\FilesystemLoader('App/Views');
+        $loader = new \Twig\Loader\FilesystemLoader('./App/Views');
         $twig = new \Twig\Environment($loader, [
             'auto_reload' => true,
         ]);

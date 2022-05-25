@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/assets/css/style.compilado.css">
+    <link rel="stylesheet" href="./assets/css/style.compilado.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
                     <li>
                         {% if name_user != '' %}
                         <button class="user__button open__dropdown">Hi, {{name_user}}
-                            <img src="{{base_url}}/assets/src/icons/user-white.svg" alt="Signin">
+                            <img src="./assets/src/icons/user-white.svg" alt="Signin">
                         </button>
                         <div class="user__dropdown">
                             <ul class="user__dropdown--wrapper">
@@ -37,7 +37,7 @@
                         </div>
                         {% else %}
                         <button class="user__button open__login">Sign-in
-                            <img src="{{base_url}}/assets/src/icons/user-white.svg" alt="Signin">
+                            <img src="./assets/src/icons/user-white.svg" alt="Signin">
                         </button>
                         {% endif %}
                     </li>
@@ -54,24 +54,24 @@
             <div class="header">
                 <h2>Sign-in</h2>
                 <span class="close">
-                    <img src="{{base_url}}/assets/src/icons/close.svg" alt="">
+                    <img src="./assets/src/icons/close.svg" alt="">
                 </span>
             </div>
-            <form method="POST" class="login-form" action="{{base_url}}/login/auth" autocomplete="off">
+            <form method="POST" class="login-form" action="./login/auth" autocomplete="off">
                 <div class="input__box">
                     <span class="input__icon">
-                        <img src="/assets/src/icons/email.svg" alt="">
+                        <img src="./assets/src/icons/email.svg" alt="">
                     </span>
                     <input name="email" type="email" value="" placeholder="Email">
                 </div>
                 <div class="input__box password">
                     <span class="input__icon">
-                        <img src="/assets/src/icons/password.svg" alt="">
+                        <img src="./assets/src/icons/password.svg" alt="">
                     </span>
                     <input name="password" type="password" value="" placeholder="Password">
                     <span class="input__icon eyes">
-                        <img class="eye" src="/assets/src/icons/eye.svg" alt="">
-                        <img class="eye-cross" src="/assets/src/icons/eye-cross.svg" alt="">
+                        <img class="eye" src="./assets/src/icons/eye.svg" alt="">
+                        <img class="eye-cross" src="./assets/src/icons/eye-cross.svg" alt="">
                     </span>
                 </div>
                 {% if error != '' %}
@@ -82,12 +82,12 @@
                 <button type="submit" class="btn__primary">
                     Sign-in
                     <span class="arrow">
-                        <img src="/assets/src/icons/arrow.svg" alt="">
+                        <img src="./assets/src/icons/arrow.svg" alt="">
                     </span>
                 </button>
             </form>
         </div>
     </div>
-    <script src="/assets/js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>

@@ -7,8 +7,8 @@
     },
     "require": {
         "twig/twig": "^3.3",
-        "robmorgan/phinx": "^0.12.10",
-        "vlucas/phpdotenv": "^5.4"
+        "vlucas/phpdotenv": "^5.4",
+        "robmorgan/phinx": "^0.12.10"
     },
     "require-dev": {
         "heroku/heroku-buildpack-php": "*"

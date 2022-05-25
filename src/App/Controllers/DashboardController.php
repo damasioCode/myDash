@@ -17,7 +17,7 @@ class DashboardController
     public function index()
     {
         if( $this->user ) {
-            $loader = new \Twig\Loader\FilesystemLoader('App/Views');
+            $loader = new \Twig\Loader\FilesystemLoader('./App/Views');
             $twig = new \Twig\Environment($loader, [
                 'auto_reload' => true,
             ]);
@@ -30,13 +30,6 @@ class DashboardController
         } else {
             header("Location: ". Template::getUrl() . '/' );
         }
-    }
-
-    public function logout()
-    {
-        unset($_SESSION['user']);
-        session_destroy();
-        header("Location: ". Template::getUrl() . '/' );
     }
 
 }

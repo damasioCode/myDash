@@ -9,7 +9,7 @@ abstract class Connection
     public static function getConn()
     {
         if (!self::$conn) {
-            self::$conn = new \PDO("{$_ENV['DB_DRIVER']}: host={$_ENV['DB_HOST']}; dbname={$_ENV['DB_NAME']}", $_ENV['DB_USER'], $_ENV['DB_PASS']);
+            self::$conn = new \PDO(DB_DRIVER.': host='.DB_HOST.'; dbname='.DB_NAME, DB_USER, DB_PASS);
         }
 
         return self::$conn;

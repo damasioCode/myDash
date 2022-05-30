@@ -37,3 +37,4 @@ const dropdown = document.querySelector('.user__dropdown');
 openDropdown.addEventListener('click', (event) => {
     dropdown.classList.toggle('active');
 });
+

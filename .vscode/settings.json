@@ -3,7 +3,7 @@
     "liveSassCompile.settings.formats": [{
         "format": "compressed", //compressed or expanded 
         "extensionName": ".compilado.css",
-        "savePath": "/public/assets/css" //diretorio para salvar o arquivo .css
+        "savePath": "/src/assets/css" //diretorio para salvar o arquivo .css
     }, ],
     //lista de pasta para não compilar
     "liveSassCompile.settings.excludeList": [

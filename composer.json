@@ -1,8 +1,8 @@
 {
     "autoload" : {
         "psr-4" : {
-            "App\\" : "src/App/",
-            "Lib\\" : "src/lib/"
+            "App\\" : "public/App/",
+            "Lib\\" : "public/lib/"
         },
         "files" : [
             "config.php"

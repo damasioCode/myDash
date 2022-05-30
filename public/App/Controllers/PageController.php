@@ -18,7 +18,7 @@ class PageController
         ]);
         $parameters['error'] = $_SESSION['msg_error']['msg'] ?? null;
         $parameters['name_user'] = $_SESSION['user']['name_user'] ?? null;
-        $parameters['base_url'] = Template::getUrl() . '/../';
+        $parameters['base_url'] = BASE_PATH;
         // $parameters['post'] = var_dump($_POST);
 
         $template = $twig->load('home.html');
@@ -34,5 +34,8 @@ class PageController
     public function debug( ) {
         // var_dump( $_GET['url'] );
         // echo 'Essa é a pagina 404';
+    }
+    public function error_404( ) {
+        echo '404';
     }
 }

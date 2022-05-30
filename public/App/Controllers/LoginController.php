@@ -15,20 +15,13 @@ class LoginController
             $user->setPassword( $_POST['password'] );
             $user->authLogin();
 
-            header("Location: ". Template::getUrl() . '/dashboard');
+            header("Location: ". BASE_PATH . '/dashboard');
         } catch (\Exception $e) {
             $_SESSION['msg_error'] = ['msg' => $e->getMessage(), 'count' => 0];            
-            header("Location: ". Template::getUrl() . '/./');
+            header("Location: ". BASE_PATH);
 
             // echo "Email invalido seu noia";
         }
             
-    }
-    
-    public function logout()
-    {
-        unset($_SESSION['user']);
-        session_destroy();
-        header("Location: ". Template::getUrl() . '/' );
     }
 }

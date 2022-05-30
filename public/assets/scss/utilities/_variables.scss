@@ -1,0 +1,37 @@
+//colocar  as variaveis de cor  do projeto no body como variaveis css
+body {
+    --cor-primaria: #33C863;
+    --cor-texto: #252733;
+    --cor--texto-neutra: #929292;
+    --cor--fundo: #fafafa;
+    --cor--fundo-2: #fff;
+    --cor--borda: #DDDFE5;
+
+}
+
+
+
+body.dark__mode {
+    --cor-preto-1: white;
+
+    //reduz levemente o brilho
+    img {
+        filter: brightness(0.9);
+    }
+}
+
+//mas utilizar dentro do sass a sintaxe de variavel do sass que é menos verrrbosa
+// preto
+$cor--primaria: #{var(--cor-primaria)};
+$cor--texto: #{var(--cor-texto)};
+$cor--texto-neutra: #{var(--cor--texto-neutra)};
+$cor--fundo: #{var(--cor--fundo)};
+$cor--fundo-2: #{var(--cor--fundo-2)};
+$cor--borda: #{var(--cor--borda)};
+$cor--borda: #{var(--cor--borda)};
+
+$cor--red1: #FF005C;
+$cor--yellow1: #FFA800;
+$cor--gray1: #111;
+
+$font-1: 'montserrat', sans-serif;

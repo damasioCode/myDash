@@ -1,0 +1,143 @@
+.modal {
+    // display: none; /* Hidden by default */
+    visibility: hidden;
+    position: fixed; /* Stay in place */
+    z-index: 4; /* Sit on top */
+    left: 0;
+    top: 0;
+    // display: flex;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    // cursor: pointer;
+    display: flex;
+    opacity: 0;
+    transition: all .1s ease-in-out;
+    
+    &.open {
+        // cursor: pointer;
+        opacity: 1;
+        visibility: visible;
+
+        .modal__wrapper {
+            transform: translateY(0);
+            // opacity: 1;
+        }
+    }
+    
+    &__wrapper {
+        max-width: 485px;
+        // height: 478px;
+        // opacity: 0;
+        background: #FFFFFF;
+        border-radius: 8px;
+        transition: all 0.2s ease-in-out;
+        transform: translateY(-80px);
+        /* Modal Content/Box */
+        margin: 0 auto; /* 15% from the top and centered */
+        padding: 20px;
+        top: -40px;
+        border: 1px solid #888;
+        width: 90%; /* Could be more or less, depending on screen size */
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 1rem;
+
+            h2 {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 2rem;
+                line-height: 1.5;
+                color: #000000;
+            }
+            .close {
+                cursor: pointer;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            .btn__primary {
+                max-width: 100%;
+            }
+
+            .input__box {
+                position: relative;
+
+                input {
+                    width: 100%;
+                    background: #F5F5F5;
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    border-radius: 4px;
+                    padding: .875rem 3rem;
+
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+
+                .input__icon {
+                    position: absolute;
+                    z-index: 3;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 14px;
+
+                }
+
+                .eyes {
+                    // display: none;
+                    left: initial;
+                    right: 14px !important;
+                    cursor: pointer;
+
+                    &.show {
+                        .eye {
+                            display: block;
+                        }
+                        .eye-cross {
+                            display: none;
+                        }
+                    }
+
+                    .eye {
+                        display: none;
+                    }
+                    .eye-cross {
+                        display: block;
+                    }
+                }
+            }
+
+            .error {
+                background: #FFD0D6;
+                border: 1px solid rgba(225, 23, 23, 0.2);
+                border-radius: 4px;
+                padding: 1rem 2rem;
+
+                p {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 1rem;
+                    line-height: 1.25;
+                    color: rgba(225, 23, 23, 0.5);
+                }
+            }
+        }
+    }
+}

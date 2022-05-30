@@ -1,0 +1,134 @@
+{% extends "layout/base.layout.dashboard.html" %}
+
+{% block content %}
+<div class="main--content">
+    <div class="estatisticas--gerais">
+        <div class="estatisticas--card">
+            <div class="img">
+                <img src="assets/img/total-vendas.svg">
+            </div>
+            <div class="texto">
+                <p class="nome--secao">Total Vendas</p>
+                <p class="valor--secao">R$512K</p>
+            </div>
+        </div>
+        <div class="estatisticas--card">
+            <div class="img">
+                <img src="assets/img/total-vendas.svg">
+            </div>
+            <div class="texto">
+                <p class="nome--secao">Total Lucros</p>
+                <p class="valor--secao">R$512K</p>
+            </div>
+        </div>
+        <div class="estatisticas--card">
+            <div class="img">
+                <img src="assets/img/total-vendas.svg">
+            </div>
+            <div class="texto">
+                <p class="nome--secao">Total de clientes</p>
+                <p class="valor--secao">23</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="charts--section">
+        <div id="chart--sales">
+        </div>
+    </div>
+
+    <div class="dashboard--footer">
+        <div class="product--sales">
+            <div class="titulo--secao">
+                <h3>Vendas de produtos</h3>
+            </div>
+            <table class="table tabela">
+                <thead>
+                    <tr>
+                        <th scope="col">Nome Produto</th>
+                        <th scope="col">Vendas</th>
+                        <th scope="col">Estoque</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Nike Air Jordan</th>
+                        <td>330</td>
+                        <td>645</td>
+                        <td>$415.01</td>
+                        <td class="estoque--ok">Em estoque</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Adidas Football</th>
+                        <td>330</td>
+                        <td>645</td>
+                        <td>$415.01</td>
+                        <td class="estoque--ok">Em estoque</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Puma Futsal</th>
+                        <td>330</td>
+                        <td>645</td>
+                        <td>$415.01</td>
+                        <td class="estoque--ok">Em estoque</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Puma Futsal</th>
+                        <td>330</td>
+                        <td>645</td>
+                        <td>$415.01</td>
+                        <td class="estoque--false">Em estoque</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Puma Futsal</th>
+                        <td>330</td>
+                        <td>645</td>
+                        <td>$415.01</td>
+                        <td class="estoque--false">Em estoque</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="lista--vendedores">
+            <div class="titulo--secao">
+                <h3>
+                    Lista de clientes</h3>
+            </div>
+            <div class="card--vendedor">
+                <div class="img">
+                    <img src="assets/img/Brooklyn.png">
+                </div>
+                <div class="texto">
+                    <p class="nome--vendedor">Brooklyn Simmons</p>
+                    <p class="email--vendedor">brooklyn.s@gmail.com
+                    </p>
+
+                </div>
+            </div>
+            <div class="card--vendedor">
+                <div class="img">
+                    <img src="assets/img/Brooklyn.png">
+                </div>
+                <div class="texto">
+                    <p class="nome--vendedor">Jacob Jones</p>
+                    <p class="email--vendedor">jacob.j@gmail.com
+                    </p>
+                </div>
+            </div>
+            <div class="card--vendedor">
+                <div class="img">
+                    <img src="assets/img/Brooklyn.png">
+                </div>
+                <div class="texto">
+                    <p class="nome--vendedor">Leslie Alexander</p>
+                    <p class="email--vendedor">leslie.a@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

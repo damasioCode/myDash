@@ -1,0 +1,68 @@
+@import "../utilities/variables";
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-width: 260px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #DDDFE5;
+  padding: 2.5rem 0;
+  grid-area: sidebar;
+  background: $cor--gray1;
+
+  .sidebar--logo {
+    margin: 0 auto;
+  }
+
+  .sidebar--menu {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 0;
+    // border-bottom: 1px solid #DDDFE5;
+
+    li {
+      // padding: 1rem 1.375rem;
+      position: relative;
+
+      &:hover,
+      &:focus {
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 3px;
+          height: 100%;
+          background-color: $cor--red1;
+        }
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        font-size: 1rem;
+        color: $cor--texto-neutra;
+        font-weight: 700;
+        transition: .3s ease;
+        padding: 1rem 1.375rem;
+
+        ion-icon {
+          margin-right: .75rem;
+          font-size: 1.375rem
+        }
+
+        &:focus,
+        &:hover {
+          color: $cor--red1;
+        }
+      }
+    }
+
+  }
+}

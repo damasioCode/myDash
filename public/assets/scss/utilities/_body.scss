@@ -1,0 +1,66 @@
+body {
+    // @include scrollbars(8px, $cor-1, rgb(238, 238, 238));
+    // font-feature-settings: 'pnum'on, 'lnum'on;
+    // transition: opacity 0.3s ease;
+    // letter-spacing: 0.3px;
+    // line-height: 140%;
+    // background: #fff;
+    font-size: 1rem;
+    overflow-x: hidden;
+    font-family: $font-1;
+    color: $cor--texto;
+    // opacity: 0;
+
+    &.dcl {
+        opacity: 1;
+    }
+}
+
+.container--personalizado {
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: 100%;
+
+    @media (min-width: 576px) {
+        max-width: 540px;
+    }
+
+    @media (min-width: 768px) {
+        max-width: 720px;
+    }
+
+    @media(min-width: 992px) {
+        max-width: 960px;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1200px;
+    }
+
+    @media (min-width: 1400px) {
+        max-width: 1400px
+    }
+
+
+
+}
+
+
+//rem responsivo
+html {
+    overflow-x: hidden;
+    --font-base: 100%;
+    font-size: var(--font-base);
+}
+
+@media (max-width: 1440px) {
+    html {
+        font-size: calc(var(--font-base) - 18.25%);
+    }
+}
+
+@media (max-width: 980px) {
+    html {
+        font-size: calc(var(--font-base) - 12.5%);
+    }
+}

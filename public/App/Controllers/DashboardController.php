@@ -24,12 +24,19 @@ class DashboardController
     
             $template = $twig->load('dashboard.html');
             $parameters['name_user'] = $_SESSION['user']['name_user'];
-            $parameters['base_url'] = Template::getUrl();
+            $parameters['base_url'] = BASE_PATH;
             
             echo $template->render( $parameters );
         } else {
-            header("Location: ". Template::getUrl() . '/' );
+            header("Location: ". BASE_PATH );
         }
+    }
+
+    public function logout()
+    {
+        unset($_SESSION['user']);
+        session_destroy();
+        header("Location: ". BASE_PATH );
     }
 
 }

@@ -1,0 +1,103 @@
+.menu__bar {
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+
+    &--wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // flex: 1;
+        width: 100%;
+    }
+
+    &--brand{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: clamp(1rem, 8vw, 2rem);
+        line-height: 1.2;
+        color: #FFFFFF;
+
+        &-color {
+            font-style: italic;
+            font-weight: 600;
+            background: linear-gradient(53.75deg, #F5851F 2.27%, #DD114E 86.37%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+    }
+
+    &--nav {
+
+        ul {
+            li {
+                position: relative;
+
+                .user__button {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 1rem;
+                    line-height: 1.25;
+                    color: #FFFFFF;
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                    position: relative;
+                    cursor: pointer;
+                }
+                
+                .user__dropdown {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: #FFFFFF;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    font-size: 1rem;
+                    line-height: 1.25;
+                    border-radius: 4px;
+                    padding: 1rem;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all .2s ease-in-out;
+
+                    &.active {
+                        transform: translateY(42px);
+                        visibility: inherit;
+                        opacity: 1;
+                    }
+
+                    &--wrapper{
+                        display: flex;
+                        align-items: center;
+                        gap: 2rem;
+                        position: relative;
+
+                        li {
+                            position: relative;
+
+                            &+::before {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: calc(-2rem / 2);
+                                width: 1px;
+                                height: 100%;
+                                background: rgba(0, 0, 0, 0.2);
+                                ;
+                                opacity: 1;
+                                transition: opacity .3s ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,173 @@
+@import "../utilities/variables";
+@import "../utilities/body";
+.dashboard--grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 260px 1fr 1fr;
+  grid-template-rows: 90px 1fr;
+  grid-template-areas: "sidebar nav nav"
+    "sidebar dash dash"
+    "sidebar dash dash";
+}
+
+
+
+.main--content {
+  position: relative;
+  grid-area: dash;
+  padding: 0 2.5rem 2.5rem 2.5rem;
+  background-color: $cor--fundo;
+
+
+  .estatisticas--gerais {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 2.5rem;
+
+    .estatisticas--card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $cor--fundo-2;
+      border: 1px solid $cor--borda;
+      padding: 2rem;
+      border-radius: 12px;
+
+      .img {
+        margin-right: 1.5rem;
+      }
+
+      .texto {
+        .nome--secao {
+          font-size: 1rem;
+          font-weight: 700;
+          color: $cor--texto-neutra;
+          margin-bottom: .5rem;
+        }
+
+        .valor--secao {
+          color: $cor--texto;
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+      }
+    }
+
+
+  }
+
+  .charts--section {
+    margin: 2.5rem 0;
+    padding: 2rem;
+    background-color: $cor--fundo-2;
+    border: 1px solid $cor--borda;
+    border-radius: 12px;
+
+    #chart {
+      max-height: 100px;
+    }
+  }
+
+  .dashboard--footer {
+    display: grid;
+    grid-template-columns: 2fr .7fr;
+    grid-gap: 2.5rem;
+
+    .product--sales {
+      background-color: $cor--fundo-2;
+      padding: 2rem;
+      border: 1px solid $cor--borda;
+      border-radius: 12px;
+
+      .titulo--secao {
+        margin-bottom: 1.5rem;
+
+        h3 {
+          font-weight: 700;
+          color: $cor--texto;
+          font-size: 1.125rem;
+
+        }
+      }
+
+      .tabela {
+        tr {
+          font-weight: 700;
+          font-size: 1rem;
+        }
+
+        .estoque--ok {
+          color: $cor--primaria;
+        }
+
+        .estoque--false {
+          color: #EB5757;
+        }
+      }
+    }
+
+    .lista--vendedores {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      border: 1px solid $cor--borda;
+      border-radius: 12px;
+      background-color: $cor--fundo-2;
+
+      .titulo--secao {
+        margin-bottom: 1.5rem;
+
+        h3 {
+          font-weight: 700;
+          color: $cor--texto;
+          font-size: 1.125rem;
+
+        }
+      }
+
+      .card--vendedor {
+        display: flex;
+        align-items: center;
+
+        &+.card--vendedor {
+          margin-top: 1.5rem;
+        }
+
+        .img {
+          margin-right: .75rem;
+        }
+
+        .texto {
+          .nome--vendedor {
+            font-weight: 700;
+            color: $cor--texto;
+            font-size: 1rem;
+            margin-bottom: .5rem;
+          }
+
+          .email--vendedor {
+            font-weight: 700;
+            color: $cor--texto-neutra;
+            font-size: .875rem;
+
+          }
+        }
+
+      }
+    }
+  }
+
+
+}
+
+
+
+/* RESET BOOTSTRAP*/
+.table>thead {
+  background-color: $cor--fundo;
+  border-radius: 12px;
+}
+
+.table>:not(:first-child) {
+  border-top: 0;
+}

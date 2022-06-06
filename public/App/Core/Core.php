@@ -55,7 +55,6 @@ class Core
             }
 
             if(!method_exists($this->controller, $this->method)) {
-                // header('Location: http://localhost:8080/myDash/public/404');
                 header("Location: ". BASE_PATH . '/404');
             }
 

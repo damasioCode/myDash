@@ -24,11 +24,11 @@ class DashboardController
     
             $template = $twig->load('dashboard.html');
             $parameters['name_user'] = $_SESSION['user']['name_user'];
-            $parameters['base_url'] = BASE_PATH;
+            $parameters['base_url'] = $_ENV['BASE_PATH'];
             
             echo $template->render( $parameters );
         } else {
-            header("Location: ". BASE_PATH );
+            header("Location: ". $_ENV['BASE_PATH'] );
         }
     }
 

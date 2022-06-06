@@ -15,10 +15,10 @@ class LoginController
             $user->setPassword( $_POST['password'] );
             $user->authLogin();
 
-            header("Location: ". BASE_PATH . '/dashboard');
+            header("Location: ". $_ENV['BASE_PATH'] . '/dashboard');
         } catch (\Exception $e) {
             $_SESSION['msg_error'] = ['msg' => $e->getMessage(), 'count' => 0];            
-            header("Location: ". BASE_PATH);
+            header("Location: ". $_ENV['BASE_PATH']);
 
             // echo "Email invalido seu noia";
         }

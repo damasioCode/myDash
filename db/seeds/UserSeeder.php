@@ -19,13 +19,19 @@ class UserSeeder extends AbstractSeed
             [
                 'id' => '1',
                 'name' => 'John Doe',
-                'email' => 'john.doe@mail.com',
+                'email' => 'john.doe@gmail.com',
                 'password' => password_hash('john123', PASSWORD_BCRYPT),
             ],
             [
                 'id' => '2',
                 'name' => 'DamasinUBrabo',
-                'email' => 'damasin@mail.com',
+                'email' => 'damasin@gmail.com',
+                'password' => password_hash('123', PASSWORD_BCRYPT),
+            ],
+            [
+                'id' => '3',
+                'name' => 'BruninUBrabo',
+                'email' => 'brunin@gmail.com',
                 'password' => password_hash('123', PASSWORD_BCRYPT),
             ],
 
